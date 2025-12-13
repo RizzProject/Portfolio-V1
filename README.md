@@ -1,4 +1,4 @@
-# Personal Portfolio Landing Page - Agus Sugandi
+# Personal Portfolio Landing Page 
 
 ## Deskripsi
 Landing page personal portfolio sederhana untuk Agus Sugandi yang dibuat menggunakan HTML, Tailwind CSS, dan JavaScript. Desain responsif dengan tema gelap dan aksen warna oranye.
