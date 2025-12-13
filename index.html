@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Rizz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#1A1B27',
+                        'orange-accent': '#FF6B35'
+                    },
+                    fontFamily: {
+                        'modern': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-dark-bg text-white font-modern">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-dark-bg/90 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Brand -->
+                <div class="flex-shrink-0">
+                    <span class="text-xl font-bold text-orange-accent">RizzProject</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-orange-accent hover:text-orange-accent/80 px-3 py-2 text-sm font-medium transition-colors">HOME</a>
+                        <a href="#about" class="text-gray-300 hover:text-orange-accent px-3 py-2 text-sm font-medium transition-colors">ABOUT</a>
+                        <a href="#skills" class="text-gray-300 hover:text-orange-accent px-3 py-2 text-sm font-medium transition-colors">SKILLS</a>
+                        <a href="#portfolio" class="text-gray-300 hover:text-orange-accent px-3 py-2 text-sm font-medium transition-colors">PORTFOLIO</a>
+                        <a href="#contact" class="text-gray-300 hover:text-orange-accent px-3 py-2 text-sm font-medium transition-colors">CONTACT</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-orange-accent focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-dark-bg border-t border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="text-orange-accent block px-3 py-2 text-base font-medium">HOME</a>
+                <a href="#about" class="text-gray-300 hover:text-orange-accent block px-3 py-2 text-base font-medium transition-colors">ABOUT</a>
+                <a href="#skills" class="text-gray-300 hover:text-orange-accent block px-3 py-2 text-base font-medium transition-colors">SKILLS</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-orange-accent block px-3 py-2 text-base font-medium transition-colors">PORTFOLIO</a>
+                <a href="#contact" class="text-gray-300 hover:text-orange-accent block px-3 py-2 text-base font-medium transition-colors">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <!-- Left Content -->
+                <div class="order-2 lg:order-1 text-center lg:text-left">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        <span class="block text-gray-300">Hello,</span>
+                        <span class="block">I Am Muhammad Rizki Saputra</span>
+                    </h1>
+                    
+                    <div class="mb-8">
+                        <div class="professions text-lg sm:text-xl text-gray-300 mb-2">
+                            <span class="item">BackEnd Developer</span>
+                            <span class="item">Penetration Tester</span>
+                            <span class="item">Bug Hunter</span>
+                        </div>
+                        <p class="text-lg sm:text-xl text-gray-300">
+                        
+                        </p>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <button class="bg-orange-accent hover:bg-orange-accent/90 text-white font-medium px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg mb-8">
+                        Let's Talk <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="flex justify-center lg:justify-start space-x-6 mb-6">
+                        <a href="https://www.linkedin.com/in/muhammad-rizki-saputra-70b676330/" class="text-gray-400 hover:text-orange-accent transition-colors text-xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/RizzProject" class="text-gray-400 hover:text-orange-accent transition-colors text-xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/kaiiriz._/" class="text-gray-400 hover:text-orange-accent transition-colors text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Download CV Link -->
+                    <div class="text-center lg:text-left">
+                        <a href="#" class="text-gray-300 hover:text-orange-accent transition-colors">
+                            <span class="text-orange-accent font-medium">Download</span> Curriculum Vitae
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Content - Profile Image -->
+                <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+                    <div class="relative group">
+                        <!-- Animated Background Elements -->
+                        <div class="absolute inset-0 bg-orange-accent rounded-full transform scale-110 opacity-20 animate-pulse"></div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-orange-accent/30 to-orange-accent/10 rounded-full transform scale-105 animate-spin-slow"></div>
+                        
+                        <!-- Rotating Border -->
+                        <div class="absolute inset-0 rounded-full border-4 border-orange-accent/30 border-dashed animate-spin-slow"></div>
+                        
+                        <!-- Profile Image Container -->
+                        <div class="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden border-4 border-orange-accent/30 transform transition-transform duration-700 group-hover:scale-105">
+                            <!-- Profile Image -->
+                            <img src="img/profile_placeholder.jpg" alt="Agus Sugandi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            
+                            <!-- Hover Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-orange-accent/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        </div>
+                        
+                        <!-- Animated Decorative Elements -->
+                        <div class="absolute -top-4 -right-4 w-8 h-8 bg-orange-accent rounded-full animate-bounce"></div>
+                        <div class="absolute top-1/4 -right-6 w-6 h-6 bg-orange-accent/60 rounded-full animate-ping"></div>
+                        <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-orange-accent/60 rounded-full animate-pulse"></div>
+                        <div class="absolute bottom-1/4 -left-6 w-4 h-4 bg-orange-accent/40 rounded-full animate-ping delay-700"></div>
+                        
+                        <!-- Floating Tech Icons -->
+                        <div class="absolute -right-8 top-1/3 animate-float delay-100">
+                            <i class="fab fa-react text-orange-accent text-2xl"></i>
+                        </div>
+                        <div class="absolute -left-8 top-1/3 animate-float delay-300">
+                            <i class="fab fa-js text-orange-accent text-2xl"></i>
+                        </div>
+                        <div class="absolute -right-6 bottom-1/3 animate-float delay-500">
+                            <i class="fab fa-html5 text-orange-accent text-2xl"></i>
+                        </div>
+                        <div class="absolute -left-6 bottom-1/3 animate-float delay-700">
+                            <i class="fab fa-css3-alt text-orange-accent text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    @keyframes float {
+                        0%, 100% { transform: translateY(0); }
+                        50% { transform: translateY(-10px); }
+                    }
+                    @keyframes spin-slow {
+                        from { transform: rotate(0deg) scale(1.05); }
+                        to { transform: rotate(360deg) scale(1.05); }
+                    }
+                    .animate-float {
+                        animation: float 3s ease-in-out infinite;
+                    }
+                    .animate-spin-slow {
+                        animation: spin-slow 15s linear infinite;
+                    }
+                </style>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-orange-accent mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-orange-accent text-lg sm:text-xl font-medium mb-8 italic">
+                    "Technology is just a tool, positive and negative depending on who uses it"
+                </p>
+                
+                <div class="text-gray-300 text-lg leading-relaxed space-y-6">
+                    <p>
+                        <p>
+                        I am a student at the Digital Technology University of Indonesia majoring in Informatics. I can work individually or collaborate with a team. I complete tasks quickly and stay up to date with the latest technology and information. I am currently 20 years old. Although still young, I already have several skills that you can rely on in the 4.0 era.
+                        </p>
+                        <p>
+
+                        <span class="text-orange-accent font-medium">BackEnd Developer, Penetration Tester, Bug Hunter, Program Office</span>, Cek detail saya di bawah
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Skills</h2>
+                <div class="w-24 h-1 bg-orange-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+
+  <!-- Penetration Testing -->
+  <div class="p-6 bg-gray-800/50 border border-gray-700 rounded-2xl flex items-center gap-4 hover:bg-gray-800 transition">
+      <span class="text-indigo-400">
+          <i data-lucide="shield-alert" class="w-8 h-8"></i>
+      </span>
+      <div>
+        <p class="text-white font-semibold text-lg">Penetration Testing</p>
+        <p class="text-gray-400 text-sm">Security Testing</p>
+      </div>
+  </div>
+
+  <!-- Ethical Hacking -->
+  <div class="p-6 bg-gray-800/50 border border-gray-700 rounded-2xl flex items-center gap-4 hover:bg-gray-800 transition">
+      <span class="text-green-400">
+          <i data-lucide="key-round" class="w-8 h-8"></i>
+      </span>
+      <div>
+        <p class="text-white font-semibold text-lg">Ethical Hacking</p>
+        <p class="text-gray-400 text-sm">Cyber Security</p>
+      </div>
+  </div>
+
+  <!-- BackEnd Developer -->
+  <div class="p-6 bg-gray-800/50 border border-gray-700 rounded-2xl flex items-center gap-4 hover:bg-gray-800 transition">
+      <span class="text-orange-400">
+          <i data-lucide="laptop" class="w-8 h-8"></i>
+      </span>
+      <div>
+        <p class="text-white font-semibold text-lg">BackEnd Developer</p>
+        <p class="text-gray-400 text-sm">Web Development</p>
+      </div>
+  </div>
+
+  <!-- Bug Bounty -->
+  <div class="p-6 bg-gray-800/50 border border-gray-700 rounded-2xl flex items-center gap-4 hover:bg-gray-800 transition">
+      <span class="text-red-400">
+          <i data-lucide="bug" class="w-8 h-8"></i>
+      </span>
+      <div>
+        <p class="text-white font-semibold text-lg">Bug Bounty</p>
+        <p class="text-gray-400 text-sm">Vulnerability Hunting</p>
+      </div>
+  </div>
+
+  <!-- OSINT -->
+  <div class="p-6 bg-gray-800/50 border border-gray-700 rounded-2xl flex items-center gap-4 hover:bg-gray-800 transition">
+      <span class="text-yellow-400">
+          <i data-lucide="search" class="w-8 h-8"></i>
+      </span>
+      <div>
+        <p class="text-white font-semibold text-lg">OSINT Research</p>
+        <p class="text-gray-400 text-sm">Open Source Intelligence</p>
+      </div>
+  </div>
+
+   <!-- Network Security (New Skill) -->
+  <div class="p-6 bg-gray-800/50 border border-gray-700 rounded-2xl flex items-center gap-4 hover:bg-gray-800 transition">
+      <span class="text-blue-400">
+          <i data-lucide="radio-tower" class="w-8 h-8"></i>
+      </span>
+      <div>
+        <p class="text-white font-semibold text-lg">Network Security</p>
+        <p class="text-gray-400 text-sm">Securing Network Infrastructure</p>
+      </div>
+  </div>
+
+</div>
+
+<script>
+  lucide.createIcons();
+</script>
+
+
+
+    </div>
+</section>
+            
+            <!-- Software Icons -->
+           <section>
+    <div class="mt-16 mb-20">
+        <h3 class="text-center text-white text-2xl font-semibold mb-8">
+            Software & Tools
+        </h3>
+
+        <!-- BARIS 1 — bergerak ke kanan -->
+        <div class="tools-row grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-6 max-w-5xl mx-auto mb-6">
+
+            <div class="bg-dark-bg p-4 rounded-lg hover:bg-gray-800 transition-colors group">
+                <div class="w-12 h-12 mx-auto flex items-center justify-center">
+                    <img src="assets/icons/kalilinux.svg" class="w-10 h-10 invert">
+                </div>
+            </div>
+
+            <div class="bg-dark-bg p-4 rounded-lg hover:bg-gray-800 transition-colors group">
+                <div class="w-12 h-12 mx-auto flex items-center justify-center">
+                    <img src="assets/icons/linux.svg" class="w-10 h-10 invert">
+                </div>
+            </div>
+
+            <div class="bg-dark-bg p-4 rounded-lg hover:bg-gray-800 transition-colors group">
+                <div class="w-12 h-12 mx-auto flex items-center justify-center">
+                    <img src="assets/icons/openbugbounty.svg" class="w-10 h-10 invert">
+                </div>
+            </div>
+
+            <div class="bg-dark-bg p-4 rounded-lg hover:bg-gray-800 transition-colors group">
+                <div class="w-12 h-12 mx-auto flex items-center justify-center">
+                    <img src="assets/icons/python.svg" class="w-10 h-10 invert">
+                </div>
+            </div>
+
+            <div class="bg-dark-bg p-4 rounded-lg hover:bg-gray-800 transition-colors group">
+                <div class="w-12 h-12 mx-auto flex items-center justify-center">
+                    <img src="assets/icons/php.svg" class="w-10 h-10 invert">
+                </div>
+            </div>
+
+            <div class="bg-dark-bg p-4 rounded-lg hover:bg-gray-800 transition-colors group">
+                <div class="w-12 h-12 mx-auto flex items-center justify-center">
+                    <img src="assets/icons/laravel.svg" class="w-10 h-10 invert">
+                </div>
+            </div>
+
+            <div class="bg-dark-bg p-4 rounded-lg hover:bg-gray-800 transition-colors group">
+                <div class="w-12 h-12 mx-auto flex items-center justify-center">
+                    <img src="assets/icons/mysql.svg" class="w-10 h-10 invert">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BARIS 2 — bergerak ke kiri -->
+        <div class="tools-row reverse grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-6 max-w-5xl mx-auto">
+
+            <div class="bg-dark-bg p-4 rounded-lg hover:bg-gray-800 transition-colors group">
+                <div class="w-12 h-12 mx-auto flex items-center justify-center">
+                    <img src="assets/icons/docker.svg" class="w-10 h-10 invert">
+                </div>
+            </div>
+
+            <div class="bg-dark-bg p-4 rounded-lg hover:bg-gray-800 transition-colors group">
+                <div class="w-12 h-12 mx-auto flex items-center justify-center">
+                    <img src="assets/icons/git.svg" class="w-10 h-10 invert">
+                </div>
+            </div>
+
+            <div class="bg-dark-bg p-4 rounded-lg hover:bg-gray-800 transition-colors group">
+                <div class="w-12 h-12 mx-auto flex items-center justify-center">
+                    <img src="assets/icons/wireshark.svg" class="w-10 h-10 invert">
+                </div>
+            </div>
+
+            <div class="bg-dark-bg p-4 rounded-lg hover:bg-gray-800 transition-colors group">
+                <div class="w-12 h-12 mx-auto flex items-center justify-center">
+                    <img src="assets/icons/burpsuite.svg" class="w-10 h-10 invert">
+                </div>
+            </div>
+
+            <div class="bg-dark-bg p-4 rounded-lg hover:bg-gray-800 transition-colors group">
+                <div class="w-12 h-12 mx-auto flex items-center justify-center">
+                    <img src="assets/icons/metasploit.svg" class="w-10 h-10 invert">
+                </div>
+            </div>
+
+            <div class="bg-dark-bg p-4 rounded-lg hover:bg-gray-800 transition-colors group">
+                <div class="w-12 h-12 mx-auto flex items-center justify-center">
+                    <img src="assets/icons/nmap_icon_132152.svg" class="w-10 h-10 invert">
+                </div>
+            </div>
+
+            <div class="bg-dark-bg p-4 rounded-lg hover:bg-gray-800 transition-colors group">
+                <div class="w-12 h-12 mx-auto flex items-center justify-center">
+                    <img src="assets/icons/java-svgrepo-com.svg" class="w-10 h-10 invert">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- Sertifikasi Section -->
+    <section id="certification" class="py-20 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Sertifikat</h2>
+                <div class="w-24 h-1 bg-orange-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Certificate 1 -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden group relative">
+                    <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openModal(0)">
+                        <img src="img/Dicoding3.png" alt="Web Development Certificate" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h3 class="font-bold text-xl mb-2">Pemrograman Python</h3>
+                                <p class="text-sm mb-4 text-gray-200">Dicoding Indonesia</p>
+                                <span class="inline-flex items-center text-orange-accent hover:text-orange-accent/80 text-sm font-medium">
+                                    View Certificate <i class="fas fa-expand ml-2"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 2 -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden group relative">
+                    <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openModal(1)">
+                        <img src="img/dicoding2.png" alt="Certificate" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h3 class="font-bold text-xl mb-2">Penerapan Data Science</h3>
+                                <p class="text-sm mb-4 text-gray-200">Dicoding Indonesia</p>
+                                <span class="inline-flex items-center text-orange-accent hover:text-orange-accent/80 text-sm font-medium">
+                                    View Certificate <i class="fas fa-expand ml-2"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 3 -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden group relative">
+                    <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openModal(2)">
+                        <img src="img/Dicoding1.png" alt="Graphic Design Certificate" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h3 class="font-bold text-xl mb-2">Membangun Aplikasi Gen:AI dengan Microsoft Azure</h3>
+                                <p class="text-sm mb-4 text-gray-200">Dicoding Indonesia</p>
+                                <span class="inline-flex items-center text-orange-accent hover:text-orange-accent/80 text-sm font-medium">
+                                    View Certificate <i class="fas fa-expand ml-2"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 4 -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden group relative">
+                    <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openModal(3)">
+                        <img src="img/sertif jaringankomputer.png" alt="Digital Marketing Certificate" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h3 class="font-bold text-xl mb-2">Fundamental Jaringan Komputer</h3>
+                                <p class="text-sm mb-4 text-gray-200">CodingStudio</p>
+                                <span class="inline-flex items-center text-orange-accent hover:text-orange-accent/80 text-sm font-medium">
+                                    View Certificate <i class="fas fa-expand ml-2"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 5 -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden group relative">
+                    <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openModal(4)">
+                        <img src="img/sertif cyber security.png" alt="Video Editing Certificate" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h3 class="font-bold text-xl mb-2">Fundamental Cyber Security</h3>
+                                <p class="text-sm mb-4 text-gray-200">CodingStudio</p>
+                                <span class="inline-flex items-center text-orange-accent hover:text-orange-accent/80 text-sm font-medium">
+                                    View Certificate <i class="fas fa-expand ml-2"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 6 -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden group relative">
+                    <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openModal(5)">
+                        <img src="img/Sertifikat fundamental penetration testing.png" alt="Motion Graphics Certificate" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h3 class="font-bold text-xl mb-2">Fundamental Penetration Testing</h3>
+                                <p class="text-sm mb-4 text-gray-200">CodingStudio</p>
+                                <span class="inline-flex items-center text-orange-accent hover:text-orange-accent/80 text-sm font-medium">
+                                    View Certificate <i class="fas fa-expand ml-2"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 7 -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden group relative">
+                    <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openModal(6)">
+                        <img src="img/codepolitan.png" alt="Motion Graphics Certificate" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h3 class="font-bold text-xl mb-2">Kelas Dasar FullStack</h3>
+                                <p class="text-sm mb-4 text-gray-200">Codepolitan</p>
+                                <span class="inline-flex items-center text-orange-accent hover:text-orange-accent/80 text-sm font-medium">
+                                    View Certificate <i class="fas fa-expand ml-2"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certificate 8 -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden group relative">
+                    <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openModal(7)">
+                        <img src="img/gamelabjpg.jpg" alt="Motion Graphics Certificate" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h3 class="font-bold text-xl mb-2">Sertifikat Kompetensi Magang</h3>
+                                <p class="text-sm mb-4 text-gray-200">Gamelab Indonesia</p>
+                                <span class="inline-flex items-center text-orange-accent hover:text-orange-accent/80 text-sm font-medium">
+                                    View Certificate <i class="fas fa-expand ml-2"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certificate 9 -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden group relative">
+                    <div class="aspect-[4/3] relative overflow-hidden cursor-pointer" onclick="openModal(8)">
+                        <img src="img/udemy1jpg.jpg" alt="Motion Graphics Certificate" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white">
+                                <h3 class="font-bold text-xl mb-2">AI & Digital Transformation in Supply Chain </h3>
+                                <p class="text-sm mb-4 text-gray-200">Udemy</p>
+                                <span class="inline-flex items-center text-orange-accent hover:text-orange-accent/80 text-sm font-medium">
+                                    View Certificate <i class="fas fa-expand ml-2"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-400 text-sm">
+                    <i class="fas fa-graduation-cap text-orange-accent mr-2"></i>
+                    Sertifikat di atas adalah beberapa pencapaian dalam bidang teknologi yang telah saya raih untuk meningkatkan keterampilan dan pengetahuan saya.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center space-x-2 mb-4">
+                    <div class="w-3 h-3 bg-orange-accent rounded-full"></div>
+                    <div class="w-3 h-3 bg-orange-accent rounded-full"></div>
+                    <div class="w-3 h-3 bg-orange-accent rounded-full"></div>
+                </div>
+                <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Project</h2>
+                <div class="w-24 h-1 bg-orange-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Portfolio Item 1 -->
+                <div class="group relative overflow-hidden rounded-lg bg-gray-800 hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="aspect-[4/3] relative overflow-hidden">
+                        <img src="img/matcha.png" alt="E-commerce Website" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-50"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <h3 class="font-bold text-xl text-white">Landing Page Website Matcha</h3>
+                            <p class="text-sm text-gray-200">Modern responsive design with React</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                        <div class="text-center text-white p-6">
+                            <h4 class="font-bold text-xl mb-4">Landing Page Website Matcha</h4>
+                            <p class="text-gray-300 mb-4">A fully responsive e-commerce platform built with React, featuring product catalog, shopping cart, and secure checkout.</p>
+                            <div class="flex flex-wrap justify-center gap-2 mb-6">
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Html</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">tailwindcss</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">JavaScript</span>
+                            </div>
+                            <a href="https://github.com/your-username/ecommerce-project" target="_blank" rel="noopener noreferrer" class="inline-block bg-orange-accent px-6 py-3 rounded-lg text-sm font-medium hover:bg-orange-accent/90 transition-colors">
+                                View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="group relative overflow-hidden rounded-lg bg-gray-800 hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="aspect-[4/3] relative overflow-hidden">
+                        <img src="img/tokobuku.png" alt="Brand Identity Design" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-50"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <h3 class="font-bold text-xl text-white">Brand Identity</h3>
+                            <p class="text-sm text-gray-200">Complete visual identity package</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                        <div class="text-center text-white p-6">
+                            <h4 class="font-bold text-xl mb-4">Brand Identity Design</h4>
+                            <p class="text-gray-300 mb-4">A comprehensive brand identity project including logo design, color palette, typography, and brand guidelines.</p>
+                            <div class="flex flex-wrap justify-center gap-2 mb-6">
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Adobe Illustrator</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Photoshop</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Branding</span>
+                            </div>
+                            <a href="https://behance.net/your-username/brand-identity" target="_blank" rel="noopener noreferrer" class="inline-block bg-orange-accent px-6 py-3 rounded-lg text-sm font-medium hover:bg-orange-accent/90 transition-colors">
+                                View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="group relative overflow-hidden rounded-lg bg-gray-800 hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="aspect-[4/3] relative overflow-hidden">
+                        <img src="img/movie.png" alt="Mobile App UI" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-50"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <h3 class="font-bold text-xl text-white">Mobile App UI</h3>
+                            <p class="text-sm text-gray-200">UI/UX Design for iOS & Android</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                        <div class="text-center text-white p-6">
+                            <h4 class="font-bold text-xl mb-4">Mobile App Design</h4>
+                            <p class="text-gray-300 mb-4">A modern and intuitive mobile app interface design with focus on user experience and accessibility.</p>
+                            <div class="flex flex-wrap justify-center gap-2 mb-6">
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Figma</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">UI/UX</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Prototyping</span>
+                            </div>
+                            <a href="https://dribbble.com/your-username/mobile-app" target="_blank" rel="noopener noreferrer" class="inline-block bg-orange-accent px-6 py-3 rounded-lg text-sm font-medium hover:bg-orange-accent/90 transition-colors">
+                                View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="group relative overflow-hidden rounded-lg bg-gray-800 hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="aspect-[4/3] relative overflow-hidden">
+                        <img src="img/crud-barang.png" alt="Motion Graphics" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-50"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <h3 class="font-bold text-xl text-white">Motion Graphics</h3>
+                            <p class="text-sm text-gray-200">Video & Animation</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                        <div class="text-center text-white p-6">
+                            <h4 class="font-bold text-xl mb-4">Motion Graphics</h4>
+                            <p class="text-gray-300 mb-4">Creative motion graphics and animations for digital marketing and social media content.</p>
+                            <div class="flex flex-wrap justify-center gap-2 mb-6">
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">After Effects</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Premiere Pro</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Animation</span>
+                            </div>
+                            <a href="https://youtube.com/your-channel" target="_blank" rel="noopener noreferrer" class="inline-block bg-orange-accent px-6 py-3 rounded-lg text-sm font-medium hover:bg-orange-accent/90 transition-colors">
+                                View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="group relative overflow-hidden rounded-lg bg-gray-800 hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="aspect-[4/3] relative overflow-hidden">
+                        <img src="img/todolist.png" alt="Web Design" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-50"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <h3 class="font-bold text-xl text-white">Web Design</h3>
+                            <p class="text-sm text-gray-200">Landing Page Design</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                        <div class="text-center text-white p-6">
+                            <h4 class="font-bold text-xl mb-4">Landing Page Design</h4>
+                            <p class="text-gray-300 mb-4">Conversion-focused landing page design with modern aesthetics and optimal user experience.</p>
+                            <div class="flex flex-wrap justify-center gap-2 mb-6">
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">HTML/CSS</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">JavaScript</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Responsive</span>
+                            </div>
+                            <a href="https://your-landing-page.com" target="_blank" rel="noopener noreferrer" class="inline-block bg-orange-accent px-6 py-3 rounded-lg text-sm font-medium hover:bg-orange-accent/90 transition-colors">
+                                View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="group relative overflow-hidden rounded-lg bg-gray-800 hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="aspect-[4/3] relative overflow-hidden">
+                        <img src="img/quiz.png" alt="Data Visualization" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-50"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <h3 class="font-bold text-xl text-white">Data Visualization</h3>
+                            <p class="text-sm text-gray-200">Analytics Dashboard</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                        <div class="text-center text-white p-6">
+                            <h4 class="font-bold text-xl mb-4">Analytics Dashboard</h4>
+                            <p class="text-gray-300 mb-4">Interactive data visualization dashboard with real-time analytics and customizable reports.</p>
+                            <div class="flex flex-wrap justify-center gap-2 mb-6">
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">D3.js</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">React</span>
+                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Chart.js</span>
+                            </div>
+                            <a href="https://github.com/your-username/dashboard-project" target="_blank" rel="noopener noreferrer" class="inline-block bg-orange-accent px-6 py-3 rounded-lg text-sm font-medium hover:bg-orange-accent/90 transition-colors">
+                                View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark-bg/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Contact</h2>
+                <p class="text-gray-400 text-lg">Let's work together! Feel free to reach out to me.</p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div class="bg-gray-800/50 p-6 rounded-lg backdrop-blur-sm">
+                        <h3 class="text-2xl font-semibold mb-6 text-center">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-orange-accent/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-envelope text-orange-accent text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400">Email</p>
+                                    <a href="mailto:rizkibaelah92@gmail.com" class="text-white hover:text-orange-accent">rizkibaelah92@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-orange-accent/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-phone text-orange-accent text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400">Phone</p>
+                                    <a href="tel:+1234567890" class="text-white hover:text-orange-accent">+62 857-883-820-93</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-orange-accent/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-orange-accent text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400">Location</p>
+                                    <p class="text-white">Bantul,Yogyakarta,Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media Links -->
+                    <div class="bg-gray-800/50 p-6 rounded-lg backdrop-blur-sm">
+                        <h3 class="text-2xl font-semibold mb-6 text-center">Follow Me</h3>
+                        <div class="flex justify-center space-x-4">
+                            <a href="https://www.linkedin.com/in/muhammad-rizki-saputra-70b676330/" class="w-12 h-12 bg-gray-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fab fa-linkedin-in text-white text-xl"></i>
+                            </a>
+                            <a href="https://github.com/RizzProject" class="w-12 h-12 bg-gray-700 hover:bg-gray-900 rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fab fa-github text-white text-xl"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@RizkiBae-qm7rq" class="w-12 h-12 bg-gray-700 hover:bg-red-600 rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fab fa-youtube text-white text-xl"></i>
+                            </a>
+                            <a href="https://www.instagram.com/kaiiriz._/" class="w-12 h-12 bg-gray-700 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fab fa-instagram text-white text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thanks for Scrolling Section -->
+    <section class="py-20 bg-dark-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-8">
+                <div class="w-20 h-20 bg-gradient-to-br from-red-600 to-red-800 rounded-full mx-auto flex items-center justify-center mb-6">
+                    <i class="fas fa-user-secret text-white text-3xl"></i>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Thank For Scrolling, That's All Folks</h2>
+                <p class="text-gray-400 text-lg mb-8">Terima kasih telah melihat portfolio saya. Mari berkolaborasi!</p>
+            </div>
+            
+            <!-- Footer -->
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-500 text-sm">
+                    © 2025 Muhammad Rizki Saputra. All rights reserved. | Made with ❤️ and lots of ☕
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-sm"></div>
+        <div class="fixed inset-0 flex items-center justify-center p-4">
+            <div class="relative w-full max-w-5xl">
+                <!-- Close button -->
+                <button onclick="closeModal()" class="absolute -top-12 right-0 text-white hover:text-orange-accent">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                <!-- Navigation buttons -->
+                <button onclick="prevCertificate()" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 text-white hover:text-orange-accent hidden md:block">
+                    <i class="fas fa-chevron-left text-3xl"></i>
+                </button>
+                <button onclick="nextCertificate()" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 text-white hover:text-orange-accent hidden md:block">
+                    <i class="fas fa-chevron-right text-3xl"></i>
+                </button>
+                <!-- Certificate Image -->
+                <img id="modalImage" src="" alt="Certificate" class="w-full h-auto rounded-lg">
+                <!-- Certificate Info -->
+                <div class="text-center mt-4">
+                    <h3 id="modalTitle" class="text-white text-xl font-bold mb-2"></h3>
+                    <p id="modalIssuer" class="text-gray-300"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Certificate Modal functionality
+        const modal = document.getElementById('certificateModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalIssuer = document.getElementById('modalIssuer');
+        let currentCertificateIndex = 0;
+        const certificates = [
+            {
+                image: 'img/Dicoding3.png',
+                title: 'Memulai Pemrograman dengan Python',
+                issuer: 'Dicoding Indonesia'
+            },
+            {
+                image: 'img/dicoding2.png',
+                title: 'Penerapan Data Science',
+                issuer: 'Dicoding Indonesia'
+            },
+            {
+                image: 'img/Dicoding1.png',
+                title: 'Membangun Aplikasi Gen:AI',
+                issuer: 'Dicoding Indonesia'
+            },
+            {
+                image: 'img/sertif jaringankomputer.png',
+                title: 'Cyber Security',
+                issuer: 'CodingStudio'
+            },
+            {
+                image: 'img/sertif cyber security.png',
+                title: 'Cyber Security',
+                issuer: 'CodingStudio'
+            },
+            {
+                image: 'img/sertifikat fundamental penetration testing.png',
+                title: 'Penetration Testing',
+                issuer: 'CodingStudio'
+            },
+            {
+                image: 'img/codepolitan.png',
+                title: 'Kelas Dasar Menjadi FullStack Developer',
+                issuer: 'Codepolitan'
+            },
+            {
+                image: 'img/gamelabjpg.jpg',
+                title: 'Sertifikat Kompetensi Magang',
+                issuer: 'GameLab Indonesia'
+            },
+            {
+                image: 'img/udemy1jpg.jpg',
+                title: 'AI & Digital Transformation In Suplay Chain Management',
+                issuer: 'Udemy'
+            }
+
+        ];
+
+        function openModal(index) {
+            currentCertificateIndex = index;
+            updateModalContent();
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function updateModalContent() {
+            const certificate = certificates[currentCertificateIndex];
+            modalImage.src = certificate.image;
+            modalTitle.textContent = certificate.title;
+            modalIssuer.textContent = certificate.issuer;
+        }
+
+        function nextCertificate() {
+            currentCertificateIndex = (currentCertificateIndex + 1) % certificates.length;
+            updateModalContent();
+        }
+
+        function prevCertificate() {
+            currentCertificateIndex = (currentCertificateIndex - 1 + certificates.length) % certificates.length;
+            updateModalContent();
+        }
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (modal.classList.contains('hidden')) return;
+            
+            switch(e.key) {
+                case 'Escape':
+                    closeModal();
+                    break;
+                case 'ArrowLeft':
+                    prevCertificate();
+                    break;
+                case 'ArrowRight':
+                    nextCertificate();
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>
+

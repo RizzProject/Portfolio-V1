@@ -1,0 +1,152 @@
+/* Custom CSS for additional styling */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(135deg, #FF6B35, #F7931E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Custom button hover effects */
+.btn-glow:hover {
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+}
+
+/* Backdrop blur fallback */
+.backdrop-blur-fallback {
+    background-color: rgba(26, 27, 39, 0.9);
+}
+
+/* Mobile menu transition */
+.mobile-menu-transition {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Profile image hover effect */
+.profile-hover:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Social icons hover effect */
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+}
+
+.professions {
+  position: relative;
+  height: 40px; /* biar tinggi area tidak berubah saat teks berganti */
+  overflow: hidden;
+}
+
+.professions .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: blur(5px);
+  animation: blurCarousel 9s infinite;
+}
+
+/* animasi tiap item bergantian muncul */
+.professions .item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.professions .item:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.professions .item:nth-child(3) {
+  animation-delay: 6s;
+}
+
+/* keyframes utama */
+@keyframes blurCarousel {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(10px);
+  }
+
+  10% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0px);
+  }
+
+  30% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+
+  40% {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 0;
+    filter: blur(5px);
+  }
+}
+
+.tools-row {
+    animation: slideRight 12s ease-in-out infinite;
+}
+
+.tools-row.reverse {
+    animation: slideLeft 12s ease-in-out infinite;
+}
+
+@keyframes slideRight {
+    0% { transform: translateX(-40px); }
+    50% { transform: translateX(40px); }
+    100% { transform: translateX(-40px); }
+}
+
+@keyframes slideLeft {
+    0% { transform: translateX(40px); }
+    50% { transform: translateX(-40px); }
+    100% { transform: translateX(40px); }
+}
