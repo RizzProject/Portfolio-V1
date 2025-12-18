@@ -160,6 +160,20 @@ html {
   filter: brightness(0) invert(1);
 }
 
+/* Typewriter caret for name */
+.typewriter::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 4px;
+  color: #FF6B35; /* accent color */
+  animation: caretBlink 1s steps(1, end) infinite;
+}
+
+@keyframes caretBlink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .tool-icon {
     transition: none;

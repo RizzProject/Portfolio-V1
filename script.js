@@ -134,6 +134,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Typewriter effect for the name
+    const nameEl = document.getElementById('typing-name');
+    if (nameEl) {
+        const text = nameEl.getAttribute('data-text') || nameEl.textContent.trim();
+        nameEl.textContent = '';
+        const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const delay = prefersReduce ? 0 : 70; // ms per character
+        let i = 0;
+
+        const typeNext = () => {
+            if (i <= text.length) {
+                nameEl.textContent = text.slice(0, i);
+                i += 1;
+                if (delay === 0) return; // skip animation
+                setTimeout(typeNext, delay);
+            }
+        };
+
+        if (delay === 0) {
+            nameEl.textContent = text;
+        } else {
+            // small start delay to sync with title fade-in
+            setTimeout(typeNext, 400);
+        }
+    }
+
     // Proximity scale effect for Software & Tools icons
     const toolsArea = document.getElementById('tools');
     if (toolsArea) {
