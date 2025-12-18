@@ -133,5 +133,64 @@ document.addEventListener('DOMContentLoaded', function() {
             element.style.transform = `translateY(${scrolled * speed}px)`;
         });
     });
+
+    // Proximity scale effect for Software & Tools icons
+    const toolsArea = document.getElementById('tools');
+    if (toolsArea) {
+        const icons = Array.from(toolsArea.querySelectorAll('.tool-icon'));
+        let rects = [];
+        const maxScale = 1.8; // maximum scale when cursor is on top
+        const radius = 130;   // influence radius in pixels
+        let rafId = null;
+        let lastMouse = { x: 0, y: 0 };
+        let inside = false;
+        const baseFilter = 'brightness(0) invert(1)';
+
+        const recomputeRects = () => {
+            rects = icons.map(el => el.getBoundingClientRect());
+        };
+
+        const applyProximity = () => {
+            rafId = null;
+            if (!inside) return;
+            for (let i = 0; i < icons.length; i++) {
+                const r = rects[i];
+                const cx = r.left + r.width / 2;
+                const cy = r.top + r.height / 2;
+                const dx = lastMouse.x - cx;
+                const dy = lastMouse.y - cy;
+                const dist = Math.hypot(dx, dy);
+                const t = Math.max(0, 1 - dist / radius);
+                const scale = 1 + t * (maxScale - 1);
+                const brightness = 0.9 + t * 0.3; // subtle highlight above white
+                icons[i].style.transform = `scale(${scale})`;
+                icons[i].style.filter = `${baseFilter} brightness(${brightness})`;
+            }
+        };
+
+        const onMouseMove = (e) => {
+            inside = true;
+            lastMouse.x = e.clientX;
+            lastMouse.y = e.clientY;
+            if (rafId == null) rafId = requestAnimationFrame(applyProximity);
+        };
+
+        const resetIcons = () => {
+            inside = false;
+            icons.forEach(el => {
+                el.style.transform = 'scale(1)';
+                el.style.filter = baseFilter;
+            });
+        };
+
+        toolsArea.addEventListener('mousemove', onMouseMove, { passive: true });
+        toolsArea.addEventListener('mouseenter', () => { recomputeRects(); inside = true; }, { passive: true });
+        toolsArea.addEventListener('mouseleave', resetIcons, { passive: true });
+        window.addEventListener('scroll', recomputeRects, { passive: true });
+        window.addEventListener('resize', recomputeRects);
+
+        // Initial rects after load
+        setTimeout(() => { recomputeRects(); resetIcons(); }, 300);
+    }
 });
 

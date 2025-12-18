@@ -150,3 +150,18 @@ html {
     50% { transform: translateX(-40px); }
     100% { transform: translateX(40px); }
 }
+
+/* Proximity scale effect for tool icons */
+.tool-icon {
+  transition: transform 120ms ease, filter 120ms ease;
+  will-change: transform;
+  transform-origin: center center;
+  /* Make any raster/SVG icon appear white */
+  filter: brightness(0) invert(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tool-icon {
+    transition: none;
+  }
+}
